@@ -19,7 +19,7 @@ function MyList( {header, items, updateList}: ListProps ) {
             <li 
                 key={item.id}
                 onClick={() => updateList(item.id)}
-                style={{textDecoration: item.clicked ? 'line-through' : 'none'}}
+                style={{textDecoration: item.clicked ? 'line-through' : ''}}
             >
                 {item.text}
             </li>
