@@ -1,26 +1,20 @@
 import React from 'react';
 
-type Item = {
+export type Item = {
     id: string,
     text: string
 };
 
-
-
 interface ListProps {
-
-  list:{
     header: string;
     items: Item[];
-  };
-
 }
 
-const MyList: React.FC<ListProps> = ( {list} ) => {
+const MyList: React.FC<ListProps> = ( {header, items} ) => {
   return (
     <ol>
-        <h2>{list.header}</h2>
-        {list.items.map((item) => (
+        <h2>{header}</h2>
+        {items.map((item) => (
             <li key={item.id}>{item.text}</li>
         ))}
     </ol>

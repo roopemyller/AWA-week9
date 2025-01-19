@@ -1,12 +1,7 @@
 
 import './App.css'
 import MyContainer from './components/MyContainer'
-import MyList from './components/MyList'
-
-type Item = {
-  id: string;
-  text: string;
-};
+import MyList, {Item} from './components/MyList'
 
 function App() {
   const header: string = "My List";
@@ -16,15 +11,13 @@ function App() {
     {id: "3", text: "Tuommonen"},
   ];
 
-  const list = {  header, items };
-
   return (
     
 
     <div className="App">
       <h1>Hello World!</h1>
       <MyContainer>
-        <MyList list={list}/>
+        <MyList header={header} items={items}/>
       </MyContainer>
     </div>
   )
